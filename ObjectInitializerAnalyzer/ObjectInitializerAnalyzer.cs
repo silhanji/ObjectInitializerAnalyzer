@@ -15,7 +15,7 @@ namespace ObjectInitializerAnalyzer
         
         private static readonly string Title = "Set all properties";
         private static readonly string MessageFormat = "Public property {0} not set";
-        private static readonly string Description = "Consider setting other public properties in object initializer";
+        private static readonly string Description = "Consider setting other public properties in object initializer.";
         private const string Category = "Usage";
         
         private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(Id, Title, MessageFormat, Category, DiagnosticSeverity.Info, isEnabledByDefault: true, description: Description);
@@ -25,6 +25,7 @@ namespace ObjectInitializerAnalyzer
         public override void Initialize(AnalysisContext context)
         {
             context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
+            context.EnableConcurrentExecution();
             
             context.RegisterSyntaxNodeAction(AnalyzeNode, SyntaxKind.ObjectInitializerExpression);
         }
