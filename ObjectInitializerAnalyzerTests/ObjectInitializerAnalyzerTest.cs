@@ -74,7 +74,7 @@ public class Model
         
     private int PrivateNumber { get; set; }
 }";
-            var diagnostics = new DiagnosticResult("OIA001", DiagnosticSeverity.Warning)
+            var diagnostics = new DiagnosticResult("OIA001", DiagnosticSeverity.Info)
                 .WithSpan(startLine: 7, startColumn: 9, endLine: 9, endColumn: 10);
 
             var test = new CSharpAnalyzerTest<ObjectInitializerAnalyzer.ObjectInitializerAnalyzer, NUnitVerifier>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -16,10 +15,10 @@ namespace ObjectInitializerAnalyzer
         
         private static readonly string Title = "Set all properties";
         private static readonly string MessageFormat = "Public property {0} not set";
-        private static readonly string Description = "Make sure that all public properties are set in object initializer";
+        private static readonly string Description = "Consider setting other public properties in object initializer";
         private const string Category = "Usage";
         
-        private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(Id, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
+        private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(Id, Title, MessageFormat, Category, DiagnosticSeverity.Info, isEnabledByDefault: true, description: Description);
         
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; } = ImmutableArray.Create(Rule);
         
@@ -41,20 +40,25 @@ namespace ObjectInitializerAnalyzer
             var assignedProperties = new HashSet<string>();
             foreach (var expression in objectInitializer.Expressions)
             {
-                if (expression is AssignmentExpressionSyntax assignment && assignment.Left is IdentifierNameSyntax identifier)
+                if (expression is AssignmentExpressionSyntax { Left: IdentifierNameSyntax identifier })
                 {
                     assignedProperties.Add(identifier.ToString());
                 }
             }
 
+            var unassignedProperties = new List<string>();
             foreach (var publicProperty in publicProperties)
             {
                 if (! assignedProperties.Contains(publicProperty))
                 {
-                    var diagnostic = Diagnostic.Create(Rule, objectInitializer.GetLocation(), publicProperty);
-                    context.ReportDiagnostic(diagnostic);
-                    return;
+                    unassignedProperties.Add(publicProperty);
                 }
+            }
+
+            if (unassignedProperties.Count > 0)
+            {
+                var diagnostic = Diagnostic.Create(Rule, objectInitializer.GetLocation(), string.Join(", ", unassignedProperties));
+                context.ReportDiagnostic(diagnostic);
             }
         }
 
