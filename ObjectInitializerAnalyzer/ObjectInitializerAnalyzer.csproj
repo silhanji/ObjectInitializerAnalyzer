@@ -7,13 +7,24 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         
         <!-- Do not trigger warning about missing dlls in the resulting nuget package -->
-        <NoPackageAnalysis>false</NoPackageAnalysis>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
         
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         
         <LangVersion>latest</LangVersion>
-        
         <Nullable>enable</Nullable>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Silhan.ObjectInitializerAnalyzer</PackageId>
+        <PackageVersion>1.0.0.0</PackageVersion>
+        <Authors>Jindrich Silhan</Authors>
+        <License>https://github.com/silhanji/ObjectInitializerAnalyzer/blob/master/LICENSE.md</License>
+        <PackageProjectUrl>https://github.com/silhanji/ObjectInitializerAnalyzer</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/silhanji/ObjectInitializerAnalyzer</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>Analyzer which suggests setting all public properties in object initializer</Description>
+        <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+        <Copyright>Jindrich Silhan 2022</Copyright>
+        <PackageTags>analyzers</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
