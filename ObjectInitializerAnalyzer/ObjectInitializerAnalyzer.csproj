@@ -2,6 +2,27 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        
+        <!-- We use custom packing rules below -->
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        
+        <!-- Do not trigger warning about missing dlls in the resulting nuget package -->
+        <NoPackageAnalysis>false</NoPackageAnalysis>
+        
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        
+        <LangVersion>latest</LangVersion>
+        
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.0.0" PrivateAssets="all" />
+        <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+    
 </Project>
