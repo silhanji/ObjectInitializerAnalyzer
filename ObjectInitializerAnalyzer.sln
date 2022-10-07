@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializerAnalyzer", "ObjectInitializerAnalyzer\ObjectInitializerAnalyzer.csproj", "{EB04A61B-F622-4B01-9B33-C3813827E4F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializerSample", "ObjectInitializerSample\ObjectInitializerSample.csproj", "{FC633B33-A913-44B7-A3A2-635D33F42946}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializerAnalyzerTests", "ObjectInitializerAnalyzerTests\ObjectInitializerAnalyzerTests.csproj", "{F256730E-324E-4179-9E95-D41DF48CE8C5}"
 EndProject
 Global
@@ -16,10 +14,6 @@ Global
 		{EB04A61B-F622-4B01-9B33-C3813827E4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB04A61B-F622-4B01-9B33-C3813827E4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB04A61B-F622-4B01-9B33-C3813827E4F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC633B33-A913-44B7-A3A2-635D33F42946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC633B33-A913-44B7-A3A2-635D33F42946}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC633B33-A913-44B7-A3A2-635D33F42946}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC633B33-A913-44B7-A3A2-635D33F42946}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
