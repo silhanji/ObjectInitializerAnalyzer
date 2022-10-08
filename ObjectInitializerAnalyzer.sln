@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializerAnalyzer", "ObjectInitializerAnalyzer\ObjectInitializerAnalyzer.csproj", "{EB04A61B-F622-4B01-9B33-C3813827E4F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrictInit.Analyzers", "StrictInit.Analyzers\StrictInit.Analyzers.csproj", "{EB04A61B-F622-4B01-9B33-C3813827E4F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializerAnalyzerTests", "ObjectInitializerAnalyzerTests\ObjectInitializerAnalyzerTests.csproj", "{F256730E-324E-4179-9E95-D41DF48CE8C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrictInitAnalyzersTest", "StrictInitAnalyzersTest\StrictInitAnalyzersTest.csproj", "{F256730E-324E-4179-9E95-D41DF48CE8C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrictInit", "StrictInit\StrictInit.csproj", "{8F509F20-358F-4AFF-851C-E48DF80405DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F256730E-324E-4179-9E95-D41DF48CE8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F509F20-358F-4AFF-851C-E48DF80405DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F509F20-358F-4AFF-851C-E48DF80405DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F509F20-358F-4AFF-851C-E48DF80405DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F509F20-358F-4AFF-851C-E48DF80405DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

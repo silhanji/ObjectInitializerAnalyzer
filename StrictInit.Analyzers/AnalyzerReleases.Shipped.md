@@ -7,4 +7,4 @@
 
 Rule ID | Category | Severity | Notes
 --------|----------|----------|--------------------
-OIA001  |  Usage   |  Info | OIA001_ObjectInitializeAnalyzer
+SI001  |  Usage   |  Info | SI001_ObjectInitializeAnalyzer

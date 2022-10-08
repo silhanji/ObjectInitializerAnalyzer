@@ -14,12 +14,12 @@
         <Nullable>enable</Nullable>
 
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>Silhan.ObjectInitializerAnalyzer</PackageId>
-        <PackageVersion>1.0.0.0</PackageVersion>
+        <PackageId>Silhan.StrictInit</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
         <Authors>Jindrich Silhan</Authors>
-        <License>https://github.com/silhanji/ObjectInitializerAnalyzer/blob/master/LICENSE.md</License>
-        <PackageProjectUrl>https://github.com/silhanji/ObjectInitializerAnalyzer</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/silhanji/ObjectInitializerAnalyzer</RepositoryUrl>
+        <License>https://github.com/silhanji/StrictInit/blob/master/LICENSE.md</License>
+        <PackageProjectUrl>https://github.com/silhanji/StrictInit</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/silhanji/StrictInit</RepositoryUrl>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Description>Analyzer which suggests setting all public properties in object initializer</Description>
         <PackageReleaseNotes>Initial release</PackageReleaseNotes>

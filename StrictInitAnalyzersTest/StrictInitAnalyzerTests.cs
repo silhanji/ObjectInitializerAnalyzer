@@ -5,11 +5,12 @@ using Microsoft.CodeAnalysis.CSharp.Testing.NUnit;
 using Microsoft.CodeAnalysis.Testing;
 using Microsoft.CodeAnalysis.Testing.Verifiers;
 using NUnit.Framework;
+using StrictInit.Analyzers;
 
-namespace ObjectInitializerAnalyzerTests
+namespace StrictInitAnalyzersTest
 {
     [TestFixture]
-    public class ObjectInitializerAnalyzerTest : AnalyzerVerifier<ObjectInitializerAnalyzer.ObjectInitializerAnalyzer>
+    public class StrictInitAnalyzerTests : AnalyzerVerifier<StrictInitAnalyzer>
     {
 
         [Test]
@@ -37,7 +38,7 @@ public class Model
     private int PrivateNumber { get; set; }
 }";
 
-            var test = new CSharpAnalyzerTest<ObjectInitializerAnalyzer.ObjectInitializerAnalyzer, NUnitVerifier>
+            var test = new CSharpAnalyzerTest<StrictInitAnalyzer, NUnitVerifier>
             {
                 TestState =
                 {
@@ -77,7 +78,7 @@ public class Model
             var diagnostics = new DiagnosticResult("OIA001", DiagnosticSeverity.Info)
                 .WithSpan(startLine: 7, startColumn: 9, endLine: 9, endColumn: 10);
 
-            var test = new CSharpAnalyzerTest<ObjectInitializerAnalyzer.ObjectInitializerAnalyzer, NUnitVerifier>
+            var test = new CSharpAnalyzerTest<StrictInitAnalyzer, NUnitVerifier>
             {
                 TestState =
                 {

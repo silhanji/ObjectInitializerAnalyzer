@@ -6,12 +6,12 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace ObjectInitializerAnalyzer
+namespace StrictInit.Analyzers
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class ObjectInitializerAnalyzer : DiagnosticAnalyzer
+    public class StrictInitAnalyzer : DiagnosticAnalyzer
     {
-        public const string Id = "OIA001";
+        public const string Id = "SI001";
         
         private static readonly string Title = "Set all properties";
         private static readonly string MessageFormat = "Public property {0} not set";

@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ObjectInitializerAnalyzer\ObjectInitializerAnalyzer.csproj" />
+      <ProjectReference Include="..\StrictInit.Analyzers\StrictInit.Analyzers.csproj" />
     </ItemGroup>
 
 </Project>
