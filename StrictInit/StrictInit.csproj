@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Silhan.StrictInit</PackageId>
+        <Description>Attributes for StrictInit.Analyzers package</Description>
     </PropertyGroup>
 
 </Project>
