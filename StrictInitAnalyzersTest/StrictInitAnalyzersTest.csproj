@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\StrictInit\StrictInit.csproj" />
       <ProjectReference Include="..\StrictInit.Analyzers\StrictInit.Analyzers.csproj" />
     </ItemGroup>
 
