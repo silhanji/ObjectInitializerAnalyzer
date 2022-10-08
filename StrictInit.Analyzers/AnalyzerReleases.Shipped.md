@@ -7,4 +7,12 @@
 
 Rule ID | Category | Severity | Notes
 --------|----------|----------|--------------------
-SI001  |  Usage   |  Info | SI001_ObjectInitializeAnalyzer
+SI001  |  Usage   |  Info | SI001_StrictInitAnalyzer
+
+## Release 1.1
+
+### New Rules
+
+Rule ID | Category | Severity | Notes
+--------|----------|----------|--------------------
+SI002  |  Usage   | Warning  | SI002_StrictInitAnalyzer
