@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
@@ -10,22 +11,28 @@ internal static class NamedTypeSymbolExtensions
         this INamedTypeSymbol namedTypeSymbol,
         IImmutableSet<string> assignedProperties)
     {
+        var baseUnassigned = namedTypeSymbol.BaseType is not null
+            ? namedTypeSymbol.BaseType.GetUnassignedStrictProperties(assignedProperties)
+            : ImmutableArray<string>.Empty;
+
         var unassigned = namedTypeSymbol.GetStrictPropertiesNames()
-            .Where(property => ! assignedProperties.Contains(property))
-            .ToArray();
+            .Where(property => ! assignedProperties.Contains(property));
         
-        return ImmutableArray.Create(unassigned);
+        return ImmutableArray.Create(baseUnassigned.Concat(unassigned).ToArray());
     }
 
     public static ImmutableArray<string> GetUnassignedSoftProperties(
         this INamedTypeSymbol namedTypeSymbol,
         IImmutableSet<string> assignedProperties)
     {
+        var baseUnassigned = namedTypeSymbol.BaseType is not null
+            ? namedTypeSymbol.BaseType.GetUnassignedSoftProperties(assignedProperties)
+            : ImmutableArray<string>.Empty;
+
         var unassigned = namedTypeSymbol.GetSoftPropertiesNames()
-            .Where(property => ! assignedProperties.Contains(property))
-            .ToArray();
-        
-        return ImmutableArray.Create(unassigned);
+            .Where(property => ! assignedProperties.Contains(property));
+
+        return ImmutableArray.Create(baseUnassigned.Concat(unassigned).ToArray());
     }
 
     public static ImmutableArray<string> GetStrictPropertiesNames(this INamedTypeSymbol namedTypeSymbol)
