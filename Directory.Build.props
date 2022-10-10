@@ -1,12 +1,12 @@
 <Project>
     <PropertyGroup>
-        <PackageVersion>1.2.0</PackageVersion>
+        <PackageVersion>1.2.1</PackageVersion>
         <Authors>Jindrich Silhan</Authors>
         <License>https://github.com/silhanji/StrictInit/blob/master/LICENSE.md</License>
         <PackageProjectUrl>https://github.com/silhanji/StrictInit</PackageProjectUrl>
         <RepositoryUrl>https://github.com/silhanji/StrictInit</RepositoryUrl>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <PackageReleaseNotes>Added code fix for all analyzers</PackageReleaseNotes>
+        <PackageReleaseNotes>Added fix for not analyzing properties from base types</PackageReleaseNotes>
         <Copyright>Jindrich Silhan 2022</Copyright>
     </PropertyGroup>
 </Project>
